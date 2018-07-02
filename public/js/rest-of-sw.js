@@ -52,6 +52,51 @@ self.addEventListener('activate', event => {
     event.waitUntil(openDb());
 });
 
+const serviceWorkerUrl = new URL(self.location);
+
+self.addEventListener('fetch', event => {
+    console.log(`[ServiceWorker:fetch] Fetch Event: `, event);
+    
+    const requestUrl = event.request.url;
+    const urlBelongsToOrigin = requestUrl.indexOf(serviceWorkerUrl.origin) > -1;
+    const isStaticResourceRequest = requestUrl.indexOf('/api/') === -1;
+    
+    if (urlBelongsToOrigin) {
+
+        const isGETRequest = event.request.method === 'GET';
+        const isPOSTRequest = event.request.method === 'POST';
+        
+        if(isGETRequest) {
+
+            if (isStaticResourceRequest) {
+                console.log(`[ServiceWorker:fetch] Processing static resource fetch event.`);
+
+                event.respondWith(
+                    applyStaticResourceCachingStrategy(event)
+                );
+            } else {
+                console.log(`[ServiceWorker:fetch] Processing dynamic data fetch event`, event);
+                
+                const accessingSessions = requestUrl.indexOf('/api/sessions') > -1;
+                
+                let promiseToResolve;
+        
+                if (accessingSessions) {
+                    promiseToResolve = getSessions(event.request);
+                } else {
+                    promiseToResolve = fetch(event.request);
+                }
+                event.respondWith(
+                    promiseToResolve
+                );
+            }
+        } else if (isPOSTRequest) {
+            console.log(`[ServiceWorker:fetch] Processing data POST fetch event.`, event);
+            event.respondWith(fetch(event.request));
+        }
+    }
+});
+
 const applyStaticResourceCachingStrategy = (event) => {
     return caches.open(`v1`).then(cache => {
         return cache.match(event.request).then(cacheResponse => {
@@ -103,14 +148,20 @@ const addSessionToDb = (session) => {
 }
 
 const openDb = () => {
-    return idb.open('fullstack', 1, (upgradeDB) => {
+    return idb.open('fullstack', 2, (upgradeDB) => {
         console.log(`[ServiceWorker:activate] Migrating db from  v${upgradeDB.oldVersion}}.`);
             
         if(!upgradeDB.objectStoreNames.contains('sessions')){
             upgradeDB.createObjectStore('sessions', {
                 keyPath: ['title', 'location', 'startsAt']
             });
-        }       
+        }
+        
+        if(!upgradeDB.objectStoreNames.contains('announcements')){
+            upgradeDB.createObjectStore('announcements', {
+                keyPath: 'timestamp'
+            });
+        }
     });
 }
 
