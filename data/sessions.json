@@ -1,0 +1,288 @@
+[
+  {
+    "title": "Keynote: The Future of Web Animation",
+    "abstract":
+      "The web is more than a document reader. While there are a million tutorials out there for the beginning stages of how to create an animation, you don't often talk about what comes next. As browsers and features mature, what are the possibilities? In this Keynote talk Sarah will focus on pushing the boundaries of what's possible, and beyond.",
+    "speaker": "Sarah Drasner",
+    "startsAt": "2017-02-10T09:30:00",
+    "location": "Room 1"
+  },
+  {
+    "title": "Keynote: The Future of Web Animation",
+    "abstract":
+      "The web is more than a document reader. While there are a million tutorials out there for the beginning stages of how to create an animation, you don't often talk about what comes next. As browsers and features mature, what are the possibilities? In this Keynote talk Sarah will focus on pushing the boundaries of what's possible, and beyond.",
+    "speaker": "Sarah Drasner",
+    "startsAt": "2017-02-10T09:30:00",
+    "location": "Room 2"
+  },
+  {
+    "title": "Keynote: The Future of Web Animation",
+    "abstract":
+      "The web is more than a document reader. While there are a million tutorials out there for the beginning stages of how to create an animation, you don't often talk about what comes next. As browsers and features mature, what are the possibilities? In this Keynote talk Sarah will focus on pushing the boundaries of what's possible, and beyond.",
+    "speaker": "Sarah Drasner",
+    "startsAt": "2017-02-10T09:30:00",
+    "location": "Room 3"
+  },
+  {
+    "title": "Keynote: The Future of Web Animation",
+    "abstract":
+      "The web is more than a document reader. While there are a million tutorials out there for the beginning stages of how to create an animation, you don't often talk about what comes next. As browsers and features mature, what are the possibilities? In this Keynote talk Sarah will focus on pushing the boundaries of what's possible, and beyond.",
+    "speaker": "Sarah Drasner",
+    "startsAt": "2017-02-10T09:30:00",
+    "location": "Room 4"
+  },
+  {
+    "title": "Keynote: The Future of Web Animation",
+    "abstract":
+      "The web is more than a document reader. While there are a million tutorials out there for the beginning stages of how to create an animation, you don't often talk about what comes next. As browsers and features mature, what are the possibilities? In this Keynote talk Sarah will focus on pushing the boundaries of what's possible, and beyond.",
+    "speaker": "Sarah Drasner",
+    "startsAt": "2017-02-10T09:30:00",
+    "location": "Room 5"
+  },
+  {
+    "title": "Progressive Web Apps: Beyond The Buzzword",
+    "abstract":
+      "It's time to push past the buzzwords and into the tech that will render native applications obsolete. James will build a \"Progressive Web App\" and on the way discover the building blocks required to truly compete with native. A Service Worker will allow users to both create and consume content offline. IndexedDb and the Cache API will ensure the app responds quickly and reliably. Web Push will keep users engaged by providing notifications of hot new content. A Web App Manifest will announce the app's capabilities to the world and help secure a slot on the user's home screen. \n After this journey, you will be ready to level up your existing web apps, create new offline-first web apps, and ...eventually... wave goodbye to native.",
+    "speaker": "James Maciver",
+    "startsAt": "2017-02-10T10:45:00",
+    "location": "Room 1"
+  },
+  {
+    "title": "We Need to Talk About Preact",
+    "abstract":
+      "Many of you have heard about Preact and may have tried it out. In this talk, you will discover the true potential of using Preact by taking a closer look at why it's a performant framework and its developer experience is so good. You will compare it to other frameworks by taking a closer look at benchmarks, its compatibility with React and which components you can use with Preact. After this Sara will share with you the present Cli and see how you can start a Preact application in seconds.",
+    "speaker": "Sara Vieira",
+    "startsAt": "2017-02-10T10:45:00",
+    "location": "Room 2"
+  },
+  {
+    "title": "Micro Frontends - A Microservice Approach To The Modern Web",
+    "abstract":
+    "The web is changing every day and it’s so hard to follow and implement all the new and fancy stuff that is being built. Cool new frameworks, libraries, methodologies and new approaches to solving problems. Usually is not that easy to deprecate some old technology and migrate to the new one. There are not many developers that still want to work with Angular 1 or Backbone and moving to something new is becoming necessary. \n If this sounds familiar to you, then this talk is for you! There is an innovative way to migrate from the old technology, to change the applications step by step and to implement all new things that the cool kids are using. Ivan will share with you the story of Micro Frontends, a microservice approach to the modern web, the story that will change the way you look and develop your apps!",
+    "speaker": "Ivan Jovanovic",
+    "startsAt": "2017-02-10T10:45:00",
+    "location": "Room 3"
+  },
+  {
+    "title": "µ-Service Resiliency With Circuit Breakers ",
+    "abstract":
+      "Modern web applications are complex. And let's face it - things break. But your application doesn't have to go down in flames just because the ProductPricingServiceActuator it's trying to contact has failed, or someone unplugged an Ethernet cable in the server room. \n In this talk, Lance will share with you a deep dive into the circuit breaker pattern, how it works and how you can use it to make your JavaScript applications shine. You will learn how to build resilient web applications that gracefully handle failure. Using JavaScript in the browser, and Node.js on the server, you will build microservices that respond to failure with features like fallback functions and request throttling. With circuit breakers, you don't just fail, you fail fast and do it with style.",
+    "speaker": "Lance Ball",
+    "startsAt": "2017-02-10T10:45:00",
+    "location": "Room 4"
+  },
+  {
+    "title": "WebAssembly And The Future of JavaScript ",
+    "abstract":
+      "JavaScript brought interactivity to the web more than 20 years ago, and despite numerous challengers, it is still the only language supported by browser. However, as those 20 years have passed we've moved from adding a little interactivity to largely static sites, to creating complex JavaScript-heavy single page applications. Throughout this journey, the way we use JavaScript itself has also changed. Gone are the days of writing simple code snippets that are run directly in the browser. Nowadays you transpile, minify, tree-shake and more, treating the JavaScript virtual machine as a compilation target. \n The problem is, JavaScript isn't a very good compilation target, because it simply wasn't designed to be one. Born out of asm.js, a somewhat crazy concept dreamt up by Mozilla, WebAssembly was designed from the ground-up as an efficient compilation target for the web. It promises smaller payloads, rapid parsing and validation and consistent performance... and it's ready to use, right now! During this talk you will learn about what's wrong with the way you are using JavaScript today and why you need WebAssembly. It will delve into the internals, giving a quick tour of the WebAssembly instruction set, memory and security model, before moving on to the more practical aspects of using it with Rust, C++ and JavaScript. Finally you'll do some crystal-ball gazing and see what the future of this rapidly evolving technology might hold.",
+    "speaker": "Colin Eberhardt",
+    "startsAt": "2017-02-10T10:45:00",
+    "location": "Room 5"
+  },
+  {
+    "title": "Web Tech Performance",
+    "abstract":
+      "“A sword by itself rules nothing. It only comes alive in skilled hands” (Sir Te; Crouching tiger, Hidden dragon). Heeding the quoted Chinese wisdom, let's get skilled with how javascript works. You will learn about layout - and it's reflow or thrashing. You will also discover how you can monitor your app and 3rd party libraries to find a culprit in a sluggish app. You'll dive into the event queue, and will soar through common design patterns used in the gaming industry to squeeze a little bit more out of your (poor) end user machine.",
+    "speaker": "Yonatan Kra",
+    "startsAt": "2017-02-10T11:45:00",
+    "location": "Room 1"
+  },
+  {
+    "title": "Sempiler - X-Platform Software Development Without VMs Or Frameworks",
+    "abstract":
+      "Many of you have heard about Preact and may have tried it out. In this talk, you will discover the true potential of using Preact by taking a closer look at why it's a performant framework and its developer experience is so good. You will compare it to other frameworks by taking a closer look at benchmarks, its compatibility with React and which components you can use with Preact. After this Sara will share with you the present Cli and see how you can start a Preact application in seconds.",
+    "speaker": "Darius Hodaei",
+    "startsAt": "2017-02-10T11:45:00",
+    "location": "Room 2"
+  },
+  {
+    "title": "Preprocessors, Components, and CSS in JS Or: How I Learned to Stop Worrying and Love the Website",
+    "abstract":
+    "Behance's codebase has existed in various states for over 7 continuous years - which includes multiple major redesigns, brand overhauls, backend framework changes, JavaScript frameworks, CSS preprocessors, templating languages, feature births and deaths, product integrations, and more. And now, Jackie and her Team are working on their latest project: moving their JavaScript and Sass to Vue.js and CSS Modules. \n During this Talk you will explore Jackie's and her Team's journey over the years, from how they choose which technologies to implement, how they piecemeal large rewrites while maintaining developer sanity and website integrity (and how to cut corners gracefully), how they manage technical debt, and finally, how to be at peace with the reality of a fragmented codebase. \n Jackie's goal with this talk is to shed light on the notion that a perfectly organized codebase following every best practice is unrealistic, especially for long-lived projects.",
+    "speaker": "Jackie Balzer",
+    "startsAt": "2017-02-10T11:45:00",
+    "location": "Room 3"
+  },
+  {
+    "title": "“The Upside Down” Of The Web: Video",
+    "abstract":
+      "Video technologies are \"The Upside Down” of the web for sure. Being a frontend engineer writing HTML5 video players, WebRTC broadcast clients, supporting 360/VR videos is just like to live in a parallel universe where everything and nothing is the same. Working with video is an exciting combination of all the trendy stuff out there what we like: new Web APIs, ByteArrays, Workers, MSE/DRM, WebRTC, WebGL, etc. \n In this talk Mate will use the Stranger Things analogy to tell the story of a video engineer who wants to craft a 360/VR html5 player from scratch using some handcrafted DASH/HLS stream. The purpose of sharing this adventure is to talk about this universe, give a detailed walk-through of the implementation and it’s challenges and to point out that everyone has the power in their browser to write such a cool thing and it’s an amazing adventure.",
+    "speaker": "Máté Nádasdi",
+    "startsAt": "2017-02-10T11:45:00",
+    "location": "Room 4"
+  },
+  {
+    "title": "Adventures In Accessibility",
+    "abstract":
+      "A gentle introduction to assistive technologies (predominantly screen readers), their users, and the accessibility tree. \n It will be explained how Javascript can both make well-designed websites more accessible, as well as make well-designed websites inaccessible. This will initially look at vanilla JavaScript. This will latterly involve the new issues introduced by frameworks such as the frameworks such AngularJS. In both cases, best practices and common gotchas will be explained. The talk will be lighthearted, simple, and focus on skills that any web developer can use.",
+    "speaker": "Dafydd Henke Reed",
+    "startsAt": "2017-02-10T11:45:00",
+    "location": "Room 5"
+  },
+  {
+    "title": "WebAssembly Is Here. What Does It Mean For Other Web Frameworks?",
+    "abstract":
+      "JavaScript has become the de-facto language for the Web with many frameworks built with it. Complex applications like games, CAD modelling and video streaming, though, require more in terms of performance and flexibility. \n WebAssembly allows you to compile and run C/C++ and other statically-typed applications in the browser, and hence enables code reusability between native and Web. Moreover, due to being a typed and low-level language, its performance comes very close to native. \n In this talk Boyan will examine WebAssembly and discuss what its future is in relation to JavaScript and some of the most popular Web frameworks.",
+    "speaker": "Boyan Mihaylov",
+    "startsAt": "2017-02-10T14:00:00",
+    "location": "Room 1"
+  },
+  {
+    "title": "Making Change As An Ally",
+    "abstract":
+      "Joe has previously been scared to speak up in situations where he could have made a change, likely from fear of saying the wrong thing and worsening the situation. But if you never take action, how can you make changes? In today's workplaces, there are still huge issues with inclusivity. Whilst you may not notice it in your workplace, underrepresented groups are faced with difficulties and feelings that those with privilege are likely to have never encountered. But this doesn't and shouldn't, have to be the way - being an ally allows you to amplify the voices of the underrepresented and make change happen. In this talk, Joe would like to share with you some of his what he has learnt around how you can be better allies for inclusivity and make improvements not only in our place of work, but in our every day lives.",
+    "speaker": "Joe Birch",
+    "startsAt": "2017-02-10T14:00:00",
+    "location": "Room 2"
+  },
+  {
+    "title": "Apps, Algorithms and Abstractions: Decoding our Digital World",
+    "abstract":
+    "It's a familiar scenario. You’re on the train, your phone goes ‘ping’, you take it out of your pocket and hey - someone sent you a message! It’s a funny cat picture! You send back ‘LOL’, you put your phone back in your pocket… but have you ever stopped to think about what’s actually involved in making that happen? Inside even the most basic smartphone there are literally hundreds of innovations, algorithms and inventions - but how do they really work? How were they developed? And what’s the next generation of algorithms and applications going to look like? \n In this talk, you will explore a deep dive into the technology behind those everyday experiences, and demystify the algorithms and abstractions that make our digital world go round. You will discover everything from network addressing algorithms, frequency-hopping cellular data networks and shortest path optimisation, to wavelet compression, fingerprint recognition and media encoding schemes. Whether you’re a programmer, a product owner or just somebody who loves using the latest tech, after watching this talk you’ll never look at your phone quite the same way again.",
+    "speaker": "Dylan Beattie",
+    "startsAt": "2017-02-10T14:00:00",
+    "location": "Room 3"
+  },
+  {
+    "title": "From Pantomime Donkey To Unicorn Designer",
+    "abstract":
+      "A designer who can code is considered a unicorn. As someone making that transition Nathalie is often quizzed - “Just how tricky is it to switch from designer to developer?” Admittedly, Nathalie sometimes feels more pantomime donkey (with very wobbly back end legs). With that in mind, this talk is an introduction into how developers can firm up their front legs and discover a love for design. Forget the fluff and abstract theories, this gets straight to the heart of how to take the structured principles of design and translate them into logical processes. Come away with ideas on how to keep frontend frameworks in their place, breathe personality into a project, and think like a designer. Get ready to toss away that pantomime donkey and rock the unicorn look.",
+    "speaker": "Nathalie Christmann Cooper",
+    "startsAt": "2017-02-10T14:00:00",
+    "location": "Room 4"
+  },
+  {
+    "title": "From Web to Mobile With NativeScript And Angular",
+    "abstract":
+      "NativeScript opens up a whole new world for the Angular developers - a world where you can use your web skills to build truly native mobile apps that run both on Android and iOS. But you can go even further - what if you can learn to extend your existing web application with a shiny mobile app? It is true - Angular's platform agnostic nature allows you to reuse your business logic across multiple platforms. Come and see it for yourself! Stanimira will share with you how to transform an Angular website to a multi-platform application running on web, Android and iOS.",
+    "speaker": "Stanimira Vlaeva",
+    "startsAt": "2017-02-10T14:00:00",
+    "location": "Room 5"
+  },
+  {
+    "title": "Performant Reinforcement Learning In JavaScript",
+    "abstract":
+      "This talk is about how to implement reinforcement learning for JavaScript. You will explore some light reinforcement learning theory (beginners friendly) as well as a discussion of how we can use C++ (with Emscripten) to boost performance in the face of an expensive algorithm. \n A sample implementation can be found here. Nathan will share the reasons for moving the project from JS to C++ with code samples for all relevant concepts presented in JS.",
+    "speaker": "Nathan Epstein",
+    "startsAt": "2017-02-10T15:00:00",
+    "location": "Room 1"
+  },
+  {
+    "title": "Introduction To ReasonML",
+    "abstract":
+      "ReasonML is a new syntax for OCaml, developed by Facebook with a heavy influence from JavaScript. \n This talk provides a brief overview of Reason, explaining its origins and why it’s so useful. The talk will walk through some simple code snippets, and demonstrate how Reason can be compiled to JavaScript to integrate with existing codebases, including React. \n Finally, you’ll be introduced some interesting open source projects and libraries in the Reason ecosystem. Although it's a very new technology, there's already a lot of excitement about it in the JavaScript community, and core contributors include some of the team behind React JS. Reason was created in order to take advantage of OCaml’s strengths whilst keeping the syntax familiar for JS developers.",
+    "speaker": "Jack Lewin",
+    "startsAt": "2017-02-10T15:00:00",
+    "location": "Room 2"
+  },
+  {
+    "title": "Building Apps With React Native and GraphQL",
+    "abstract":
+    "Richard has introduced GraphQL as a backend to our React Native mobile apps. The talk will look at some of the choices behind this, the advantages it gives in the developer experience and some of the challenges and considerations. Rich will also look at which GraphQL clients to use and when.",
+    "speaker": "Richard McMenamin",
+    "startsAt": "2017-02-10T15:00:00",
+    "location": "Room 3"
+  },
+  {
+    "title": "The Art of Continuous Delivery using Jenkins Pipeline DSL and Docker for Node.js Application",
+    "abstract":
+      "For a technology Company such as eBay, the ability to continuously roll out software is crucial for competing in a fast paced industry and highly disruptive market. A Company can become more competitive by evolving its products and services into more versatile solutions for its customers. This can be achieved through the continuous roll-out of incremental code changes in a safe and controlled manner to reduce technical debt and accelerate innovation. \n Guillaume will introduce practices and offer strategies that teams can use to improve their effectiveness with rolling out code changes to a live environment using Continuous Delivery (CD). He will also demonstrate how teams can achieve CD for their applications, services or libraries by giving the team control over its Build Pipeline via a robust, repeatable and programmatic way to bootstrap, evolve and restore a CD pipeline. As part of the demonstration, he will introduce how to use the latest capability of Jenkins Pipeline DSL when designing a CD pipeline and how to use Docker containers for running the CD pipeline.",
+    "speaker": "Guillaume Pichot",
+    "startsAt": "2017-02-10T15:00:00",
+    "location": "Room 4"
+  },
+  {
+    "title": "Let's Look at Web Components And The Exciting New Angular Feature, Angular Elements!",
+    "abstract":
+      "In front-end development, the modern JavaScript frameworks/libraries use Components. Component based Architecture allows you to structure your applications into modular components that are small, configurable, have single responsibility, provide encapsulation, are reusable and are easier to maintain. During this Lightning Talk you will learn about Custom Elements, Shadow Dom, HTML Templates and HTML Imports, which are the set of features that make Web Components possible. The Angular team have been working on going further than providing component modularity and encapsulation. Angular Elements are Angular Components packaged as custom elements. It is a new feature that came out in Angular 6. Ashnita will share with you her understanding of how Angular Elements work.",
+    "speaker": "Ashnita Bali",
+    "startsAt": "2017-02-10T15:00:00",
+    "location": "Room 5"
+  },
+
+
+  {
+    "title": "TBC",
+    "abstract":
+      "TBC",
+    "speaker": "TBC",
+    "startsAt": "2017-02-10T15:15:00",
+    "location": "Room 1"
+  },
+  {
+    "title": "TBC",
+    "abstract":
+      "TBC",
+    "speaker": "TBC",
+    "startsAt": "2017-02-10T15:15:00",
+    "location": "Room 2"
+  },
+  {
+    "title": "TBC",
+    "abstract":
+    "TBC",
+    "speaker": "TBC",
+    "startsAt": "2017-02-10T15:15:00",
+    "location": "Room 3"
+  },
+  {
+    "title": "TBC",
+    "abstract":
+      "TBC",
+    "speaker": "TBC",
+    "startsAt": "2017-02-10T15:15:00",
+    "location": "Room 4"
+  },
+  {
+    "title": "TBC",
+    "abstract":
+      "TBC",
+    "speaker": "TBC",
+    "startsAt": "2017-02-10T15:15:00",
+    "location": "Room 5"
+  },
+
+
+
+  {
+    "title": "Building dApps With JavaScript And Ethereum",
+    "abstract":
+      "This workshop combines two of the hottest topics in software development: Blockchain development and JavaScript You will: - Create powerful, end-to - end applications for Blockchain using Ethereum - Write your first program - Learn how to design and build applications by using Blockchain \n Topics - Blockchain technology and decentralized applications - How Ethereum Works- Smart Contracts - Using web3.js and Solidity - How to create Ethereum wallets - How to create a Smart Contract Deployment Platform - Enterprise Level Smart Contracts - Consortium Blockchain \n The workshop will be hands-on, you will build multiple applications",
+    "speaker": "Peter Dickten",
+    "startsAt": "2017-02-10T15:45:00",
+    "location": "Room 1"
+  },
+  {
+    "title": "The Node.js Performance Workshop",
+    "abstract":
+      "You’ve been discovering how to write performant JavaScript in Node.js since the beginning. Before you knew how it was it done it all seemed so magical. But as you became better at understanding fast-scrolling text littered with hex addresses we began a journey to solidify your approach and share it with others. Your primary strategy? Build tools that make optimizing Node easier, then formalize a workflow process around those tools. \n The workshop is extremely interactive. You make sure that each participant solves several performance issues in a given HTTP application. Your methods and tools include 0x for flamegraph generation, autocannon for HTTP/1.1 benchmarking, v8 trace analysis, and bytecode interpretation all within a structured analysis workflow. \n Requirements: Participation requires a recent version of either Linux or macOs, or otherwise a VM running a recent Linux version. They will need root/admin access, and the ability to build native node modules. Follow these instructions.",
+    "speaker": "David Mark Clements",
+    "startsAt": "2017-02-10T15:45:00",
+    "location": "Room 2"
+  },
+  {
+    "title": "How to Deploy Your React Application While Saving Time and Energy",
+    "abstract":
+    "As a front end developer, you often dread the process of deploying and hosting our applications. You want to focus on perfecting the front end and hope the deployment process is quick and simple. Unfortunately, that’s usually not the case and you spend hours of our time and energy to do a simple deployment. Rizchel has created a React template application and quick start guide to help you save those wasted hours and make deploying your applications easier. In this workshop, you will learn how to build a simple React & Redux application.",
+    "speaker": "Rizchel Dayao",
+    "startsAt": "2017-02-10T15:45:00",
+    "location": "Room 3"
+  },
+  {
+    "title": "Build Your Own Trivia Game In NativeScript and a REST API",
+    "abstract":
+      "Few years back, using Web technologies for building mobile apps revolved around using hybrid frameworks that basically used a web host view to run a web app inside. As a consequence, the performance of such apps rarely met the desired expectations, leaving the development of immersive and exciting mobile apps to native mobile technologies. This fact has been hard on businesses as well, as having the need of investing in separate designated teams to target multiple platforms takes its toll on expenses, effort, and time. Luckily, the rules have changed! You can now see more and more technologies emerge to fill in the gap. For quite some time now, building modern native mobile apps using Web technologies is no longer a dream. In this workshop, you will learn how to build a native mobile app along with a containerized web API to support it. The app you are going to build is a trivia quiz app. It is all about fun and games! You will choose between different trivia games comprised of several questions, be that picture-based or multiple choice, and goes through solving it all the way over to the summary and feedback. The app will be built using NativeScript, an open source framework for building native iOS and Android apps, while the back-end will focus on building a REST API using Node.js with Express, and hosting it with Docker.",
+    "speaker": "Guy Nesher",
+    "startsAt": "2017-02-10T15:45:00",
+    "location": "Room 4"
+  },
+  {
+    "title": "Machine Learning For Hackers",
+    "abstract":
+      "In this workshop, Athan is going to deliberately avoid dry, formal math-heavy presentation and get your hands dirty implementing and using machine learning algorithms, all in JavaScript. You will first learn why JavaScript and the web platform are important new frontiers in the future of machine learning application development. You will then dabble in statistical inference, learning enough of the core principles to make us dangerous. From there, you will learn how to implement some machine learning algorithms from scratch, gaining insight into how the sausage is really made. And finally, you will sample from an assortment of machine learning algorithms, applying them to problems far and wide. By the end of the workshop, you'll be ready to deep dive into the machine learning revolution, knowing where to look and what to look for. No matter what your background, if you're a hacker, this is your workshop.",
+    "speaker": "Athan Reines",
+    "startsAt": "2017-02-10T15:45:00",
+    "location": "Room 5"
+  }
+
+]
