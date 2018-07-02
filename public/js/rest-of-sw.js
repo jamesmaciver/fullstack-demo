@@ -38,7 +38,8 @@ self.addEventListener('install', event => {
             'img/yonatankra.jpg',
             'js/register-service-worker.js',
             'index.html',
-            'schedule.html'
+            'schedule.html',
+            'announcements.html'
           ])
           .catch(error => console.error('Failed to install service worker', error));
         })
@@ -61,3 +62,65 @@ const applyStaticResourceCachingStrategy = (event) => {
         });
     })
 }
+
+const getSessions = (request) => {
+    return getSessionsFromDb().then((resultSet) => {
+        if(resultSet && resultSet.length > 0) {
+            return returnAsJsonResponse(resultSet);
+        }
+        return fetch(request)
+                .then(response => response.json())
+                .then(sessions => 
+                {
+                    const promises = [];
+                    sessions.forEach(session => {
+                        promises.push(addSessionToDb(session));
+                    });
+                    return Promise.all(promises).then(() => {
+                        return returnAsJsonResponse(sessions);
+                    });
+                });
+    });
+}
+
+const getSessionsFromDb = () => {
+    return openDb()
+        .then(db => 
+                db.transaction('sessions')
+                    .objectStore('sessions')
+                    .getAll()
+            );
+}
+
+const addSessionToDb = (session) => {
+    return openDb()
+        .then(db =>
+                db.transaction('sessions', 'readwrite')
+                    .objectStore('sessions')
+                    .put(session)
+                    .complete
+            );
+}
+
+const openDb = () => {
+    return idb.open('fullstack', 1, (upgradeDB) => {
+        console.log(`[ServiceWorker:activate] Migrating db from  v${upgradeDB.oldVersion}}.`);
+            
+        if(!upgradeDB.objectStoreNames.contains('sessions')){
+            upgradeDB.createObjectStore('sessions', {
+                keyPath: ['title', 'location', 'startsAt']
+            });
+        }       
+    });
+}
+
+const returnAsJsonResponse = (resultSet) => {
+    return Promise.resolve(new Response(
+                JSON.stringify(resultSet), 
+                {
+                    headers: {
+                        'content-type': 'application/json'
+                    }
+                }));
+}
+
