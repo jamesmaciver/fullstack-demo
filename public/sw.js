@@ -1,52 +1,7 @@
+importScripts('js/idb.js');
 importScripts('js/rest-of-sw.js');
 const serviceWorkerUrl = new URL(self.location);
 
-self.addEventListener('install', event => {
-    console.log(`[ServiceWorker:install] Installing service worker.`);
-    self.skipWaiting();
-
-    event.waitUntil(
-        caches.open(`v1`).then(cache => {
-          return cache.addAll([
-            'css/site.css',
-            'css/spectre-icons.min.css',
-            'css/spectre.min.css',
-            'img/fullstack-logo.png',
-            'img/ashnitabali.jpg',
-            'img/athanreines.jpg',
-            'img/boyanmihaylov.jpg',
-            'img/colineberhardt.jpg',
-            'img/dafyddhenkereed.jpg',
-            'img/dariushodaei.jpg',
-            'img/davidmarkclements.jpg',
-            'img/dylanbeattie.jpg',
-            'img/guillaumepichot.jpg',
-            'img/guynesher.jpg',
-            'img/ivanjovanovic.jpg',
-            'img/jackiebalzer.jpg',
-            'img/jacklewin.jpg',
-            'img/jamesmaciver.jpg',
-            'img/joebirch.jpg',
-            'img/lanceball.jpg',
-            'img/máténádasdi.jpg',
-            'img/nathaliechristmanncooper.jpg',
-            'img/nathanepstein.jpg',
-            'img/peterdickten.jpg',
-            'img/richardmcmenamin.jpg',
-            'img/rizcheldayao.jpg',
-            'img/sarahdrasner.jpg',
-            'img/saravieira.jpg',
-            'img/stanimiravlaeva.jpg',
-            'img/tbc.jpg',
-            'img/yonatankra.jpg',
-            'js/register-service-worker.js',
-            'index.html',
-            'schedule.html'
-          ])
-          .catch(error => console.error('Failed to install service worker', error));
-        })
-      );
-});
 
 self.addEventListener('fetch', event => {
     console.log(`[ServiceWorker:fetch] Fetch Event: `, event);
@@ -57,20 +12,87 @@ self.addEventListener('fetch', event => {
     
     if (urlBelongsToOrigin) {
         if (isStaticResourceRequest) {
+            console.log(`[ServiceWorker:fetch] Processing static resource fetch event.`);
+
             event.respondWith(
-                caches.open(`v1`).then(cache => {
-                    return cache.match(event.request).then(cacheResponse => {
-                        return cacheResponse || fetch(event.request).then(networkResponse => {
-                            cache.put(event.request, networkResponse.clone());
-                            return networkResponse;
-                        });
-                    });
-                })
+                applyStaticResourceCachingStrategy(event)
             );
         } else {
+            console.log(`[ServiceWorker:fetch] Processing dynamic data fetch event.`, event);
+            
+            const accessingSessions = requestUrl.indexOf('/api/sessions') > -1;
+            
+            let promiseToResolve;
+    
+            if (accessingSessions) {
+                promiseToResolve = getSessions(event.request);
+            } else {
+                promiseToResolve = fetch(event.request);
+            }
             event.respondWith(
-                fetch(event.request)
+                promiseToResolve
             );
         }
     }
 });
+
+const getSessions = (request) => {
+    return getSessionsFromDb().then((resultSet) => {
+        if(resultSet && resultSet.length > 0) {
+            return returnAsJsonResponse(resultSet);
+        }
+        return fetch(request)
+                .then(response => response.json())
+                .then(sessions => 
+                {
+                    const promises = [];
+                    sessions.forEach(session => {
+                        promises.push(addSessionToDb(session));
+                    });
+                    return Promise.all(promises).then(() => {
+                        return returnAsJsonResponse(sessions);
+                    });
+                });
+    });
+}
+
+const getSessionsFromDb = () => {
+    return openDb()
+        .then(db => 
+                db.transaction('sessions')
+                    .objectStore('sessions')
+                    .getAll()
+            );
+}
+
+const addSessionToDb = (session) => {
+    return openDb()
+        .then(db =>
+                db.transaction('sessions', 'readwrite')
+                    .objectStore('sessions')
+                    .put(session)
+                    .complete
+            );
+}
+
+const openDb = () => {
+    return idb.open('fullstack', 1, (upgradeDB) => {
+        console.log(`[ServiceWorker:activate] Migrating db from  v${upgradeDB.oldVersion}}.`);
+            
+        if(!upgradeDB.objectStoreNames.contains('sessions')){
+            upgradeDB.createObjectStore('sessions', {
+                keyPath: ['title', 'location', 'startsAt']
+            });
+        }       
+    });
+}
+
+const returnAsJsonResponse = (resultSet) => {
+    return Promise.resolve(new Response(
+                JSON.stringify(resultSet), 
+                {
+                    headers: {
+                        'content-type': 'application/json'
+                    }
+                }));
+}
