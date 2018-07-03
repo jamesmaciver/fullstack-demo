@@ -1,0 +1,25 @@
+{
+    "short_name": "FullStack",
+    "name": "FullStack London 2018",
+    "icons": [
+      {
+        "src": "img/fullstack-icon-144.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "img/fullstack-icon-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "img/fullstack-icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "background_color": "black",
+    "theme_color": "black",
+    "display": "standalone",
+    "start_url": "index.html"
+  }

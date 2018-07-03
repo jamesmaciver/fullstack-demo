@@ -39,7 +39,8 @@ self.addEventListener('install', event => {
             'js/register-service-worker.js',
             'index.html',
             'schedule.html',
-            'announcements.html'
+            'announcements.html',
+            'manifest.json'
           ])
           .catch(error => console.error('Failed to install service worker', error));
         })
